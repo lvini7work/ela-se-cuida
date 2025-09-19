@@ -1,410 +1,394 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="pt-br">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.1">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Ela se Cuida — Guia Básico de Higiene Íntima, Autocuidado e Bem-Estar</title>
+  <meta name="description" content="Autocuidado começa hoje. Um guia simples, direto e sem tabus sobre higiene íntima, autocuidado e bem-estar. Disponível em todos os dispositivos." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ela se Cuida — Guia Básico de Higiene Íntima, Autocuidado e Bem-Estar">
+  <meta property="og:description" content="O básico que você precisa saber — simples, confortável e sem tabus.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="capa-ela-se-cuida.png"> <!-- trocar: URL absoluta da imagem de capa -->
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================
+       ELA SE CUIDA — LANDING
+       Mobile-first, clean, pronta pra colar no Elementor/HTML
+       Paleta: azul-petróleo + branco
+       ========================= */
+
+    :root{
+      --bg:#0f2a35;           /* azul-petróleo escuro */
+      --bg-2:#124052;         /* variação */
+      --fg:#0f141a;           /* texto em fundos claros */
+      --on-dark:#eef6f9;      /* texto em fundo escuro */
+      --muted:#6b8793;
+      --brand:#1c6f8a;        /* azul-petróleo principal */
+      --brand-2:#21a0c7;      /* acento */
+      --white:#ffffff;
+      --card:#ffffff;
+      --border:#e6eef2;
+      --radius:14px;
+      --container:1100px;
+      --shadow:0 10px 30px rgba(16,44,56,.15);
+    }
+
+    /* Reset básico */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    body{
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--fg);
+      background:linear-gradient(180deg,#f8fdff, #f3fbff 40%, #eef8fc);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Layout */
+    .container{max-width:var(--container); margin:0 auto; padding:0 20px}
+
+    /* Header minimalista (fixo opcional) */
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter:saturate(140%) blur(6px);
+      background:rgba(255,255,255,.7);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 20px}
+    .logo{
+      font-weight:800; letter-spacing:.2px;
+      color:var(--brand);
+    }
+    .mini-cta{display:flex; gap:10px; align-items:center}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      background:#e6f6fb; color:#0b3f4e; padding:8px 12px; border-radius:999px; font-weight:600; font-size:.9rem;
+    }
+
+    /* HERO */
+    .hero{
+      padding:36px 0 24px;
+    }
+    .hero-wrap{
+      display:grid; gap:24px;
+    }
+    .kicker{color:var(--brand); font-weight:800; letter-spacing:.3px; text-transform:uppercase; font-size:.8rem}
+    h1{font-size:clamp(28px,5vw,44px); line-height:1.15; margin:8px 0 10px}
+    .sub{color:#1c2b32; max-width:60ch}
+    .hero-cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 18px; border-radius:999px; border:1px solid var(--border);
+      font-weight:700; box-shadow:var(--shadow);
+      transition:transform .02s ease; /* sem hover exagerado */
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; border:0}
+    .btn-secondary{background:#ffffff; color:#0f3441}
+    .hero-media{
+      display:grid; grid-template-columns:1fr; align-items:end; gap:10px; max-width:520px
+    }
+    .device-seal{
+      display:inline-flex; align-items:center; gap:8px; font-size:.9rem; color:#0b3f4e;
+      background:#e6f6fb; padding:8px 12px; border-radius:999px; width:max-content
+    }
+    .ebook{
+      background:var(--card); border:1px solid var(--border); border-radius:18px; padding:16px; box-shadow:var(--shadow)
+    }
+    .ebook img{border-radius:12px}
+
+    /* Seções */
+    section{padding:56px 0}
+    .section-title{font-size:clamp(22px,4vw,32px); margin:0 0 8px}
+    .section-sub{color:#315260; margin:0 0 20px}
+
+    /* Benefícios */
+    .grid{display:grid; gap:14px}
+    .card{
+      background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)
+    }
+    .card h3{margin:0 0 6px; font-size:1.1rem}
+    .card p{margin:0; color:#33515c}
+
+    /* Conteúdo do e-book (lista numerada) */
+    .list{
+      counter-reset:item;
+      display:grid; gap:10px;
+    }
+    .list li{
+      list-style:none; background:#fff; border:1px solid var(--border); border-radius:12px; padding:14px 14px 14px 46px; position:relative
+    }
+    .list li::before{
+      counter-increment:item; content:counter(item);
+      position:absolute; left:12px; top:12px;
+      width:26px; height:26px; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; border-radius:50%; font-weight:800; font-size:.9rem;
+    }
+    .highlight{
+      display:inline-block; background:linear-gradient(135deg,#e6f6fb,#eafcff); padding:2px 8px; border-radius:999px; border:1px solid var(--border); font-weight:600; color:#0b3f4e
+    }
+
+    /* História (3 blocos) */
+    .story{
+      display:grid; gap:12px
+    }
+    .story .step{
+      background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; box-shadow:var(--shadow)
+    }
+    .step strong{color:var(--brand)}
+
+    /* Prova Social */
+    .quotes{
+      display:grid; gap:12px
+    }
+    blockquote{
+      margin:0; padding:16px; background:#ffffff; border:1px solid var(--border); border-radius:14px;
+      font-style:italic; color:#163440; box-shadow:var(--shadow)
+    }
+    blockquote footer{margin-top:8px; font-style:normal; color:#57727d}
+
+    /* FAQ */
+    .faq{display:grid; gap:10px}
+    .faq details{
+      background:#fff; border:1px solid var(--border); border-radius:12px; padding:10px 14px; box-shadow:var(--shadow)
+    }
+    .faq summary{font-weight:700; cursor:pointer; outline:none}
+    .faq p{margin:8px 0 0; color:#33515c}
+
+    /* Fechamento */
+    .cta-wrap{
+      background:linear-gradient(180deg, #e9f8ff, #ffffff);
+      border:1px solid var(--border);
+      border-radius:18px; padding:22px; box-shadow:var(--shadow)
+    }
+    .cta-wrap .btn{margin-top:10px}
+
+    /* Rodapé */
+    footer{
+      border-top:1px solid var(--border);
+      padding:20px; color:#5e7c86; text-align:center
+    }
+    .footlinks{
+      display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:8px
+    }
+    .footlinks a{color:#3b6f82; text-decoration:underline}
+
+    /* Responsivo (desktop) */
+    @media (min-width: 900px){
+      .hero-wrap{grid-template-columns:1.1fr .9fr; align-items:center}
+      .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+      .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+      .story{grid-template-columns:repeat(3,1fr)}
+      .quotes{grid-template-columns:repeat(3,1fr)}
+    }
+
+    /* Acessibilidade focada */
+    .btn:focus-visible, a:focus-visible, summary:focus-visible{
+      outline:3px solid rgba(33,160,199,.55); outline-offset:2px;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="pt-br"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Ela se Cuida — Guia Básico de Higiene Íntima, Autocuidado e Bem-Estar&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Autocuidado começa hoje. Um guia simples, direto e sem tabus sobre higiene íntima, autocuidado e bem-estar. Disponível em todos os dispositivos." /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Open Graph --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:title" content="Ela se Cuida — Guia Básico de Higiene Íntima, Autocuidado e Bem-Estar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:description" content="O básico que você precisa saber — simples, confortável e sem tabus."&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:type" content="website"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:image" content="capa-ela-se-cuida.png"&gt; &lt;!-- trocar: URL absoluta da imagem de capa --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:locale" content="pt_BR"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Fonte --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* =========================</p>
-<p class="p1"><span class="Apple-converted-space">       </span>ELA SE CUIDA — LANDING</p>
-<p class="p1"><span class="Apple-converted-space">       </span>Mobile-first, clean, pronta pra colar no Elementor/HTML</p>
-<p class="p1"><span class="Apple-converted-space">       </span>Paleta: azul-petróleo + branco</p>
-<p class="p1"><span class="Apple-converted-space">       </span>========================= */</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0f2a35; <span class="Apple-converted-space">          </span>/* azul-petróleo escuro */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg-2:#124052; <span class="Apple-converted-space">        </span>/* variação */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--fg:#0f141a; <span class="Apple-converted-space">          </span>/* texto em fundos claros */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--on-dark:#eef6f9;<span class="Apple-converted-space">      </span>/* texto em fundo escuro */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted:#6b8793;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--brand:#1c6f8a;<span class="Apple-converted-space">        </span>/* azul-petróleo principal */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--brand-2:#21a0c7;<span class="Apple-converted-space">      </span>/* acento */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--white:#ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--card:#ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--border:#e6eef2;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius:14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--container:1100px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--shadow:0 10px 30px rgba(16,44,56,.15);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Reset básico */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*,*::before,*::after{box-sizing:border-box}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>html,body{margin:0;padding:0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>img{max-width:100%;display:block}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a{color:inherit;text-decoration:none}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color:var(--fg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(180deg,#f8fdff, #f3fbff 40%, #eef8fc);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.6;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>-webkit-font-smoothing:antialiased;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>-moz-osx-font-smoothing:grayscale;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Layout */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container{max-width:var(--container); margin:0 auto; padding:0 20px}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Header minimalista (fixo opcional) */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position:sticky; top:0; z-index:10;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter:saturate(140%) blur(6px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:rgba(255,255,255,.7);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 20px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight:800; letter-spacing:.2px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color:var(--brand);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.mini-cta{display:flex; gap:10px; align-items:center}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.badge{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; align-items:center; gap:8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:#e6f6fb; color:#0b3f4e; padding:8px 12px; border-radius:999px; font-weight:600; font-size:.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* HERO */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:36px 0 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-wrap{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid; gap:24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.kicker{color:var(--brand); font-weight:800; letter-spacing:.3px; text-transform:uppercase; font-size:.8rem}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1{font-size:clamp(28px,5vw,44px); line-height:1.15; margin:8px 0 10px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.sub{color:#1c2b32; max-width:60ch}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; align-items:center; justify-content:center; gap:10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:12px 18px; border-radius:999px; border:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight:700; box-shadow:var(--shadow);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition:transform .02s ease; /* sem hover exagerado */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn:active{transform:translateY(1px)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; border:0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-secondary{background:#ffffff; color:#0f3441}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-media{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns:1fr; align-items:end; gap:10px; max-width:520px</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.device-seal{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; align-items:center; gap:8px; font-size:.9rem; color:#0b3f4e;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:#e6f6fb; padding:8px 12px; border-radius:999px; width:max-content</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.ebook{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:var(--card); border:1px solid var(--border); border-radius:18px; padding:16px; box-shadow:var(--shadow)</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.ebook img{border-radius:12px}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Seções */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>section{padding:56px 0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-title{font-size:clamp(22px,4vw,32px); margin:0 0 8px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-sub{color:#315260; margin:0 0 20px}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Benefícios */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.grid{display:grid; gap:14px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card h3{margin:0 0 6px; font-size:1.1rem}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card p{margin:0; color:#33515c}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Conteúdo do e-book (lista numerada) */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.list{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>counter-reset:item;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid; gap:10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.list li{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>list-style:none; background:#fff; border:1px solid var(--border); border-radius:12px; padding:14px 14px 14px 46px; position:relative</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.list li::before{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>counter-increment:item; content:counter(item);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position:absolute; left:12px; top:12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width:26px; height:26px; display:grid; place-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; border-radius:50%; font-weight:800; font-size:.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.highlight{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-block; background:linear-gradient(135deg,#e6f6fb,#eafcff); padding:2px 8px; border-radius:999px; border:1px solid var(--border); font-weight:600; color:#0b3f4e</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* História (3 blocos) */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.story{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid; gap:12px</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.story .step{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; box-shadow:var(--shadow)</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.step strong{color:var(--brand)}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Prova Social */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.quotes{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid; gap:12px</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>blockquote{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin:0; padding:16px; background:#ffffff; border:1px solid var(--border); border-radius:14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-style:italic; color:#163440; box-shadow:var(--shadow)</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>blockquote footer{margin-top:8px; font-style:normal; color:#57727d}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* FAQ */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.faq{display:grid; gap:10px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.faq details{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:#fff; border:1px solid var(--border); border-radius:12px; padding:10px 14px; box-shadow:var(--shadow)</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.faq summary{font-weight:700; cursor:pointer; outline:none}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.faq p{margin:8px 0 0; color:#33515c}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Fechamento */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cta-wrap{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(180deg, #e9f8ff, #ffffff);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius:18px; padding:22px; box-shadow:var(--shadow)</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cta-wrap .btn{margin-top:10px}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Rodapé */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-top:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:20px; color:#5e7c86; text-align:center</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footlinks{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:8px</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footlinks a{color:#3b6f82; text-decoration:underline}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Responsivo (desktop) */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (min-width: 900px){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero-wrap{grid-template-columns:1.1fr .9fr; align-items:center}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.grid.cols-3{grid-template-columns:repeat(3,1fr)}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.grid.cols-2{grid-template-columns:repeat(2,1fr)}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.story{grid-template-columns:repeat(3,1fr)}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.quotes{grid-template-columns:repeat(3,1fr)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Acessibilidade focada */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn:focus-visible, a:focus-visible, summary:focus-visible{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>outline:3px solid rgba(33,160,199,.55); outline-offset:2px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Header / Mini topo --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container topbar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="logo"&gt;Ela se Cuida&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav class="mini-cta" aria-label="atalhos"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="badge" aria-label="Disponível em todos os dispositivos"&gt;📱 Disponível em todos os dispositivos&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn btn-primary" href="#"&gt;Baixar agora&lt;/a&gt; &lt;!-- trocar: link real de checkout --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 1) Herói --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero" id="inicio"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container hero-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="kicker"&gt;Guia prático e respeitoso&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h1&gt;Autocuidado começa hoje.&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="sub"&gt;O básico que você precisa saber sobre higiene íntima, autocuidado e bem-estar — simples, confortável e sem tabus.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hero-cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn btn-primary" href="#"&gt;Baixar agora&lt;/a&gt; &lt;!-- trocar --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn btn-secondary" href="#conteudo"&gt;Ver o que tem dentro&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="device-seal" style="margin-top:12px"&gt;💡 Disponível em todos os dispositivos&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-media"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ebook"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- trocar: "capa-ela-se-cuida.png" pela imagem de maquete do e-book --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="capa-ela-se-cuida.png" alt="Capa do e-book Ela se Cuida — Guia Básico de Higiene Íntima, Autocuidado e Bem-Estar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 2) Benefícios --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="beneficios" aria-labelledby="tit-beneficios"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" id="tit-beneficios"&gt;Benefícios&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-sub"&gt;Clareza, autonomia e respeito consigo mesma.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid cols-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;article class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Higiene íntima sem tabus&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Explicações diretas, com responsabilidade e linguagem simples — sem constrangimentos.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/article&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;article class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Autocuidado prático&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Rituais curtos, aplicáveis no dia a dia e adaptáveis à sua rotina.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/article&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;article class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Bem-estar de verdade&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Sem promessas milagrosas: foco no que funciona e no que faz sentido para você.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/article&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 3) Conteúdo do e-book --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="conteudo" aria-labelledby="tit-conteudo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" id="tit-conteudo"&gt;O que você vai encontrar&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-sub"&gt;Estrutura clara e sem rodeios. &lt;span class="highlight"&gt;Inclui bônus exclusivo!&lt;/span&gt;&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;ol class="list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;Fundamentos de higiene íntima&lt;/strong&gt; — mitos × fatos.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;Rotina de autocuidado diário&lt;/strong&gt; — passo a passo simples.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;Como lidar com calor e suor&lt;/strong&gt; — e constrangimentos comuns.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;Produtos&lt;/strong&gt; — o que usar e o que evitar.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;Guia rápido&lt;/strong&gt; — verão e atividade física.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;Bônus:&lt;/strong&gt; &lt;span class="highlight"&gt;Checklist Feminino de Higiene Pessoal&lt;/span&gt; (imprimível + móvel).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ol&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- trocar: ilustração do bônus --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid cols-2" style="margin-top:16px; align-items:center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Checklist Feminino&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Leve com você no celular ou imprima e mantenha sempre por perto.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul style="padding-left:18px; margin:10px 0 0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Itens essenciais organizados por ocasião.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Versão “um-passe” para dias corridos.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Dicas de organização e reposição.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="checklist.png" alt="Prévia do Checklist Feminino de Higiene Pessoal"&gt; &lt;!-- trocar --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 4) História da Maya --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="historia" aria-labelledby="tit-historia"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" id="tit-historia"&gt;A história da Maya&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-sub"&gt;Um antes e depois que poderia ser o seu.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="story"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Antes:&lt;/strong&gt; insegura após um encontro frustrado.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Durante:&lt;/strong&gt; conselho da irmã — “Autocuidado é respeito por si mesma”.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Depois:&lt;/strong&gt; mais leve, confiante e feliz no dia a dia.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 5) Prova Social --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="prova-social" aria-labelledby="tit-prova"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" id="tit-prova"&gt;O que estão dizendo&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="quotes"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;blockquote&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;“Conteúdo direto e sem tabu.”&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;footer&gt;— &lt;em&gt;Leitora&lt;/em&gt; &lt;!-- trocar: nome/credencial --&gt;&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/blockquote&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;blockquote&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;“O checklist me ajudou nos dias de calor.”&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;footer&gt;— &lt;em&gt;Leitora&lt;/em&gt; &lt;!-- trocar --&gt;&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/blockquote&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;blockquote&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;“Prático e respeitoso. Recomendando.”&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;footer&gt;— &lt;em&gt;Leitora&lt;/em&gt; &lt;!-- trocar --&gt;&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/blockquote&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 6) FAQ --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="faq" aria-labelledby="tit-faq"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" id="tit-faq"&gt;Perguntas frequentes&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;summary&gt;Para qual idade é o conteúdo?&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;O material é indicado para &lt;strong&gt;maiores de 18 anos&lt;/strong&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;summary&gt;Como acesso?&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Você pode ler em &lt;strong&gt;celular, tablet e computador&lt;/strong&gt;. O arquivo é otimizado para todos os dispositivos.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;summary&gt;É material médico?&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Não. É um &lt;strong&gt;conteúdo educativo&lt;/strong&gt; com orientações gerais. Para situações específicas, procure profissionais de saúde.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;summary&gt;Tem garantia?&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Sim, conforme a &lt;strong&gt;política da Hotmart&lt;/strong&gt;. &lt;!-- trocar: link da política --&gt; &lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 7) Fechamento com CTA --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="cta-final" aria-labelledby="tit-fechamento"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2 class="section-title" id="tit-fechamento"&gt;Descubra o guia &lt;span style="color:var(--brand)"&gt;Ela se Cuida&lt;/span&gt; 💙&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="section-sub"&gt;Higiene íntima, autocuidado e bem-estar — com abordagem confortável e sem tabus.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="section-sub"&gt;&lt;strong&gt;Inclui:&lt;/strong&gt; Checklist Feminino de Higiene Pessoal&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn btn-primary" href="#"&gt;Quero meu acesso agora&lt;/a&gt; &lt;!-- trocar: link real --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 8) Rodapé --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;© &lt;span id="y"&gt;2025&lt;/span&gt; Ela se Cuida. Todos os direitos reservados.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="footlinks" aria-label="links de rodapé"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" rel="nofollow"&gt;Política de Privacidade&lt;/a&gt; &lt;!-- trocar --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" rel="nofollow"&gt;Termos de Uso&lt;/a&gt; &lt;!-- trocar --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" rel="nofollow"&gt;Suporte&lt;/a&gt; &lt;!-- trocar --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ano automático no rodapé (opcional no Elementor) */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>(function(){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>var y = document.getElementById('y');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if(y) y.textContent = new Date().getFullYear();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>})();</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+  <!-- Header / Mini topo -->
+  <header>
+    <div class="container topbar">
+      <div class="logo">Ela se Cuida</div>
+      <nav class="mini-cta" aria-label="atalhos">
+        <span class="badge" aria-label="Disponível em todos os dispositivos">📱 Disponível em todos os dispositivos</span>
+        <a class="btn btn-primary" href="#">Baixar agora</a> <!-- trocar: link real de checkout -->
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1) Herói -->
+    <section class="hero" id="inicio">
+      <div class="container hero-wrap">
+        <div>
+          <div class="kicker">Guia prático e respeitoso</div>
+          <h1>Autocuidado começa hoje.</h1>
+          <p class="sub">O básico que você precisa saber sobre higiene íntima, autocuidado e bem-estar — simples, confortável e sem tabus.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#">Baixar agora</a> <!-- trocar -->
+            <a class="btn btn-secondary" href="#conteudo">Ver o que tem dentro</a>
+          </div>
+          <div class="device-seal" style="margin-top:12px">💡 Disponível em todos os dispositivos</div>
+        </div>
+
+        <div class="hero-media">
+          <div class="ebook">
+            <!-- trocar: "capa-ela-se-cuida.png" pela imagem de maquete do e-book -->
+            <img src="capa-ela-se-cuida.png" alt="Capa do e-book Ela se Cuida — Guia Básico de Higiene Íntima, Autocuidado e Bem-Estar">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) Benefícios -->
+    <section id="beneficios" aria-labelledby="tit-beneficios">
+      <div class="container">
+        <h2 class="section-title" id="tit-beneficios">Benefícios</h2>
+        <p class="section-sub">Clareza, autonomia e respeito consigo mesma.</p>
+
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>Higiene íntima sem tabus</h3>
+            <p>Explicações diretas, com responsabilidade e linguagem simples — sem constrangimentos.</p>
+          </article>
+          <article class="card">
+            <h3>Autocuidado prático</h3>
+            <p>Rituais curtos, aplicáveis no dia a dia e adaptáveis à sua rotina.</p>
+          </article>
+          <article class="card">
+            <h3>Bem-estar de verdade</h3>
+            <p>Sem promessas milagrosas: foco no que funciona e no que faz sentido para você.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) Conteúdo do e-book -->
+    <section id="conteudo" aria-labelledby="tit-conteudo">
+      <div class="container">
+        <h2 class="section-title" id="tit-conteudo">O que você vai encontrar</h2>
+        <p class="section-sub">Estrutura clara e sem rodeios. <span class="highlight">Inclui bônus exclusivo!</span></p>
+
+        <ol class="list">
+          <li><strong>Fundamentos de higiene íntima</strong> — mitos × fatos.</li>
+          <li><strong>Rotina de autocuidado diário</strong> — passo a passo simples.</li>
+          <li><strong>Como lidar com calor e suor</strong> — e constrangimentos comuns.</li>
+          <li><strong>Produtos</strong> — o que usar e o que evitar.</li>
+          <li><strong>Guia rápido</strong> — verão e atividade física.</li>
+          <li><strong>Bônus:</strong> <span class="highlight">Checklist Feminino de Higiene Pessoal</span> (imprimível + móvel).</li>
+        </ol>
+
+        <!-- trocar: ilustração do bônus -->
+        <div class="grid cols-2" style="margin-top:16px; align-items:center">
+          <div class="card">
+            <h3>Checklist Feminino</h3>
+            <p>Leve com você no celular ou imprima e mantenha sempre por perto.</p>
+            <ul style="padding-left:18px; margin:10px 0 0">
+              <li>Itens essenciais organizados por ocasião.</li>
+              <li>Versão “um-passe” para dias corridos.</li>
+              <li>Dicas de organização e reposição.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <img src="checklist.png" alt="Prévia do Checklist Feminino de Higiene Pessoal"> <!-- trocar -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) História da Maya -->
+    <section id="historia" aria-labelledby="tit-historia">
+      <div class="container">
+        <h2 class="section-title" id="tit-historia">A história da Maya</h2>
+        <p class="section-sub">Um antes e depois que poderia ser o seu.</p>
+
+        <div class="story">
+          <div class="step">
+            <p><strong>Antes:</strong> insegura após um encontro frustrado.</p>
+          </div>
+          <div class="step">
+            <p><strong>Durante:</strong> conselho da irmã — “Autocuidado é respeito por si mesma”.</p>
+          </div>
+          <div class="step">
+            <p><strong>Depois:</strong> mais leve, confiante e feliz no dia a dia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) Prova Social -->
+    <section id="prova-social" aria-labelledby="tit-prova">
+      <div class="container">
+        <h2 class="section-title" id="tit-prova">O que estão dizendo</h2>
+        <div class="quotes">
+          <blockquote>
+            <p>“Conteúdo direto e sem tabu.”</p>
+            <footer>— <em>Leitora</em> <!-- trocar: nome/credencial --></footer>
+          </blockquote>
+          <blockquote>
+            <p>“O checklist me ajudou nos dias de calor.”</p>
+            <footer>— <em>Leitora</em> <!-- trocar --></footer>
+          </blockquote>
+          <blockquote>
+            <p>“Prático e respeitoso. Recomendando.”</p>
+            <footer>— <em>Leitora</em> <!-- trocar --></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) FAQ -->
+    <section id="faq" aria-labelledby="tit-faq">
+      <div class="container">
+        <h2 class="section-title" id="tit-faq">Perguntas frequentes</h2>
+        <div class="faq">
+          <details>
+            <summary>Para qual idade é o conteúdo?</summary>
+            <p>O material é indicado para <strong>maiores de 18 anos</strong>.</p>
+          </details>
+          <details>
+            <summary>Como acesso?</summary>
+            <p>Você pode ler em <strong>celular, tablet e computador</strong>. O arquivo é otimizado para todos os dispositivos.</p>
+          </details>
+          <details>
+            <summary>É material médico?</summary>
+            <p>Não. É um <strong>conteúdo educativo</strong> com orientações gerais. Para situações específicas, procure profissionais de saúde.</p>
+          </details>
+          <details>
+            <summary>Tem garantia?</summary>
+            <p>Sim, conforme a <strong>política da Hotmart</strong>. <!-- trocar: link da política --> </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7) Fechamento com CTA -->
+    <section id="cta-final" aria-labelledby="tit-fechamento">
+      <div class="container">
+        <div class="cta-wrap">
+          <h2 class="section-title" id="tit-fechamento">Descubra o guia <span style="color:var(--brand)">Ela se Cuida</span> 💙</h2>
+          <p class="section-sub">Higiene íntima, autocuidado e bem-estar — com abordagem confortável e sem tabus.</p>
+          <p class="section-sub"><strong>Inclui:</strong> Checklist Feminino de Higiene Pessoal</p>
+          <a class="btn btn-primary" href="#">Quero meu acesso agora</a> <!-- trocar: link real -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 8) Rodapé -->
+  <footer>
+    <div>© <span id="y">2025</span> Ela se Cuida. Todos os direitos reservados.</div>
+    <nav class="footlinks" aria-label="links de rodapé">
+      <a href="#" rel="nofollow">Política de Privacidade</a> <!-- trocar -->
+      <a href="#" rel="nofollow">Termos de Uso</a> <!-- trocar -->
+      <a href="#" rel="nofollow">Suporte</a> <!-- trocar -->
+    </nav>
+  </footer>
+
+  <script>
+    /* ano automático no rodapé (opcional no Elementor) */
+    (function(){
+      var y = document.getElementById('y');
+      if(y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
